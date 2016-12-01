@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Material Design Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.appsflyer.com/dashboard/y2016m12/1480587705793/main.css" />
+  <style>
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .page {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    background-color: #f5f6f8;
+    box-sizing: border-box;
+    padding: 30px;
+  }
+  .card {
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    vertical-align: middle;
+    transition: min-width 0.3s cubic-bezier(0.190, 1.000, 0.220, 1.000), min-height 1s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  }
+  .test-flow-bar {
+    text-align: center;
+    background-color: #ffffff;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #ffffff 50%, #009fdf 50%);
+    border-radius: 5px;
+  }
+  .test-flow {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    min-width: 350px;
+    min-height: 275px;
+  }
+  .test-flow-title {
+    font-family: 'museo_sans300';
+    font-size: 16px;
+    color: #3f4a56;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    padding: 20px 0 15px;
+    transition: all 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  }
+  .test-flow-icon {
+    width: 111px;
+    height: 132px;
+    background-size: 111px 132px !important;
+    margin: 0 auto 30px;
+    float: none;
+    transition: all 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  }
+  .test-flow-run {
+    border-top: 2px solid #f5f6f8;
+    font-family: 'museo_sans300';
+    font-size: 16px;
+    color: #3f4a56;
+    margin: 0 auto;
+    padding: 25px 0;
+    float: none;
+    cursor: pointer;
+  }
+
+  .test-flow-run > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .test-flow-run-arrow-circle {
+    border: 2px solid #009fdf;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+
+  .test-flow-run-arrow {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #009fdf;
+    border-right: 2px solid #009fdf;
+    transition: all 200ms ease;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 14px;
+    margin-left: -5px;
+    transform: translate3d(0,-50%,0) rotate(45deg);
+  }
+  .install-flow .test-flow-icon {
+    background: url('install.png');
+  }
+
+  .full {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .full .test-flow-bar {
+    transition: background-position 0.5s;
+    background-position: -100% 0;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .full .test-flow-icon {
+    width: 37px;
+    height: 44px;
+    background-size: 37px 44px !important;
+    margin: 0 auto;
+  }
+  .full .test-flow-title {
+    padding: 10px 0 6px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .full .test-flow-run {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-top: none;
+    padding: 0;
+  }
+  .full .test-flow-run-text {
+    display: none;
+  }
+  .full .test-flow-run-arrow-circle {
+    border: 2px solid #ffffff;
+    margin-left: 0;
+  }
+  .full .test-flow-run-arrow {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    margin-top: 14px;
+    margin-right: -8px;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
+  }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="card test-flow install-flow">
+      <div class="test-flow-bar">
+        <div class="test-flow-title">Non-Organic Installs</div>
+        <div class="test-flow-icon"></div>
+        <div class="test-flow-run">
+          <div class="test-flow-run-text">Run test</div>
+          <div class="test-flow-run-arrow-circle">
+            <div class="test-flow-run-arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="test-flow-content"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script>
+  $().ready(function() {
+    $('.test-flow-run').click(function() {
+      var $card = $(this).closest(".card");
+      if ($card.hasClass('full')) {
+        $card.removeClass('full');
+      }
+      else {
+       $card.addClass('full'); 
+      }
+    });
+  });
+  </script>
+</body>
+
+</html>
