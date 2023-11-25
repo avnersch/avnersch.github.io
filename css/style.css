@@ -90,7 +90,7 @@ html {
 }
 
 .content-section {
-  width: 900px;
+  width: 66%;
   margin: 5rem auto;
   padding: 0;
   background-color: #f4f4f4;
@@ -108,7 +108,7 @@ html {
 }
 
 .content-section-text {
-  width: 600px;
+  width: 66%;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -145,4 +145,17 @@ html {
   line-height: 24px;
   text-align: center;
   margin: 1em 0;
+}
+
+@media screen and ( max-width: 1200px ) {
+  .content-section {
+    display: block;
+  } 
+  .content-section > div {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
