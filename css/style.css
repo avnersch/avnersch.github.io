@@ -21,7 +21,6 @@
   position: fixed;
   left: 0px;
   top: 100px;
-  z-index: 1;
 }
 
 .grumpy img {
@@ -43,10 +42,6 @@ html {
 
 .back-top:hover {
   text-decoration: none;
-}
-
-#about, #movie, #place, #food {
-  scroll-behavior: smooth;
 }
 
 .header h1 {
@@ -74,16 +69,6 @@ html {
 .navigation > ul > li {
   display: inline-block;
   margin: 10px;
-}
-
-
-.navigation a {
-  font-family: 'Raleway', serif;
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: all .2s ease-in;
 }
 
 .navigation > ul > li > a {
@@ -128,6 +113,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content-section-text .subtitle {
+  font-weight: 500;
 }
 
 .content-section-image {
