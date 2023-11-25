@@ -3,6 +3,9 @@
     transform: translateX(-100%);
   }
   25% {
+    transform: translateX(-100%);
+  }
+  50% {
     transform: translateX(0%);
   }
   75% {
@@ -14,7 +17,7 @@
 }
 
 .grumpy {
-  animation: slide-in 5000ms forwards;
+  animation: slide-in 8000ms forwards;
   position: fixed;
   left: 0px;
   top: 100px;
