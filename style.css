@@ -1,3 +1,30 @@
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.grumpy {
+  animation: slide-in 5000ms forwards;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  z-index: 1;
+}
+
+.grumpy img {
+  max-width: 275px;
+}
+
 html {
   scroll-behavior: smooth;
 }
